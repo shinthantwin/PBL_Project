@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tour</title>
+	<style type="text/css">
+
+		body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    position: sticky; top: 0px;
+  }
+  header li{
+    padding: 10px;
+  }
+  .nav_bar {
+   display: flex;
+   list-style-type: none;
+  }
+  .nav_bar a {
+
+   text-decoration: none;
+   color:#253342;
+    font-family: sans-serif;
+  }
+  .item{
+  width: 150px;
+  }
+  .nav_bar a:hover {
+    color: #154484;
+    text-decoration: underline;
+  }
+.dd_content{
+    display: none;
+    list-style-type: none;
+    position: absolute; top: 50px;
+    padding: 30px;
+    background-color: white;
+
+}
+.dropdown:hover .dd_content{
+    display: block;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.toggler{
+  display: none;
+}
+
+
+@media only screen and (max-width:768px){
+    .nav_bar{
+      display: none;
+      position: absolute; top: 60px; left: 0px; right: 0px;
+      background-color: #FFBD1F;
+    }
+
+    .toggler{
+      display: block;
+    }
+input[type="checkbox"]:checked ~ .nav_bar{
+  display: block;
+}
+header{
+  justify-content: space-between;
+}
+}
+
+
+.box h1{
+  color: #154484;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.box img{
+	box-shadow: 0px 8px 8px gray;
+  float: left;
+  margin: 20px;
+}
+
+.img1:hover{transform: scale(1.1);}
+.img1{transition: 0.2s linear}
+
+.img2:hover{transform: scale(1.1);}
+.img2{transition: 0.2s linear}
+
+.img3:hover{transform: scale(1.1);}
+.img3{transition: 0.2s linear}
+
+.para{
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 70%; height: 140px;
+  margin: auto;
+  clear: left;
+  padding-top: 20px;
+  padding: 35px;
+  background-color:  #154484; color: #FFBD1F ;
+  border-radius: 15px 50px 30px;
+}
+/*For phone view*/
+@media only screen and (max-width:600px) {
+ .box img{
+  width: 90%;
+ }
+ .para{
+  width: 80%;
+  height: 200px;
+ }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*For Tablet View*/
+
+@media only screen and (min-width:600px){
+  .box img{
+  width: 28%;
+ }
+ .para{
+  width: 60%;
+ }
+ .nav_bar{
+      display: none;
+      position: absolute; top: 60px; left: 0px; right: 0px;
+      background-color: #FFBD1F;
+    }
+
+    .toggler{
+      display: block;
+    }
+input[type="checkbox"]:checked ~ .nav_bar{
+  display: block;
+}
+header{
+  justify-content: space-between;
+}
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*For laptop view*/
+
+@media only screen and (min-width:992px) {
+  .box img{
+    width: 30%;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    position: sticky; top: 0px;
+  }
+  header li{
+    padding: 10px;
+  }
+  .nav_bar {
+   display: flex;
+   list-style-type: none;
+   position: absolute; top: 5px; left: 100px;
+   background-color: white;
+  }
+  .nav_bar a {
+
+   text-decoration: none;
+   color:#253342;
+    font-family: sans-serif;
+  }
+  .item{
+  width: 150px;
+  }
+  .nav_bar a:hover {
+    color: #154484;
+    text-decoration: underline;
+  }
+.dd_content{
+    display: none;
+    list-style-type: none;
+    position: absolute; top: 30px;
+    padding: 30px;
+    background-color: white;
+
+}
+.dropdown:hover .dd_content{
+    display: block;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.toggler{
+  display: none;
+}
+
+}
+
+
+  </style>
+
+</head>
+<body>
+  <header>
+     <a href="pbl2.html"> <img src="logo10.png" width="100px"></a>
+      <input type="checkbox" id="cb">
+      <label for="cb" class="toggler">&#9776;</label>
+
+    <ul class="nav_bar">
+    <li class="item"><a href="#">Home</a></li>
+     <li class="item dropdown"><a href="#">Tours</a>
+       <ul class="dd_content">
+        <li><a href="#">Rome</a></li>
+        <li><a href="#">Venice</a></li>
+        <li><a href="#">Milan</a></li>
+        <li><a href="#">Naples</a></li>
+       </ul>
+      </li>
+
+     <li class="item"><a href="ggeo.html">Geography</a></li>
+     <li class="item"><a href="history2.html">History</a></li>
+     <li class="item"> <a href="#">Tips</a></li>
+     <li class="item"> <a href="about_us.html">About Us</a></li>
+    
+    </ul>
+  </header>
+
+<div class="container">
+  <div class="box">
+    <h1>Venice</h1>
+   <img class="img1" src="https://i.pinimg.com/564x/d5/42/f3/d542f388f5c85c9736a2c1c37306d627.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://i.pinimg.com/564x/ac/00/ae/ac00aea954c858915aba3c9321f5c743.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3"  src="https://i.pinimg.com/564x/93/a5/10/93a510b23fcb515a278e003f62aa8f48.jpg" width="20%">
+</div>
+</div>
+
+<div class="para">
+  <p>Venice is a city in northeastern Italy and the capital of the Veneto region. It is built on a group of 126 islands that are separated by expanses of open water and by canals; portions of the city are linked by 472 bridges. The islands are in the shallow Venetian Lagoon, an enclosed bay lying between the mouths of the Po and the Piave rivers (more exactly between the Brenta and the Sile).  </p>
+
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1" src="https://i.pinimg.com/736x/87/b5/c9/87b5c9c41ee7d7745f2b72fab07adc08.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://i.pinimg.com/564x/55/47/5a/55475a13a181fbe4cfea97f46134eb72.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3" src="https://i.pinimg.com/564x/9d/7a/bc/9d7abc6d95f54d6ff2df7d8e0333d165.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>(St. Mark's Basilica) Whether it's your first or 10th visit to Venice, the Basilica di San Marco still will impress you. This cathedral has so many details, from golden domes with paintings on the inside to beautiful decorations and statues of animals on the outside. Every visit you will see something different in and around the church. Tip: take the time to observe the mosaic well. More info about the number 1 thing to do in Venice, the 'Basilica di San Marco'.  
+
+</p>
+
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1" src="https://i.pinimg.com/564x/61/05/e5/6105e5d501d787bac4319e7074f484d6.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://i.pinimg.com/564x/10/df/60/10df60e41375ef7c957fe56908a901c4.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3"src="https://i.pinimg.com/564x/ef/6f/ef/ef6fef219400d3c2b1de69f57c5b1137.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>(Canal Grande & Rialto Bridge) The Grand Canal – or Canal Grande – flows through the 6 districts of Venice. Many smaller canals eventually lead to this Grand Canal. This canal is beautiful to see from the shore, but a boat trip is even better to experience the Venice landmarks and sights from the water. You must have done this at least once in your life. About halfway along the Grand Canal is the famous Ponte di Rialto (Rialto Bridge). This covered pedestrian bridge has many shops where you can buy your souvenirs. </p>
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1"src="https://i.pinimg.com/736x/90/21/dd/9021ddcff543776d336dfdecf761ee5c.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://i.pinimg.com/736x/37/81/94/378194b121aa873298abaeb142579962.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3" src="https://i.pinimg.com/564x/99/ab/9d/99ab9d8605ba2efd8a6fd7e68040b664.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>(Teatro la Fenice) 
+
+You don't have to be a theater lover to appreciate the beautiful interior of this property. The velvet armchairs, the richly decorated balconies, the lighting and the amazing ceiling will make a visit to this theater even without a performance special. However, in the Feniks theater, various kinds of performances take place, such as Venetian opera and ballet, as well as concerts. If you wish, you can book this La Fenice tour or spend an evening in Teatro La Fenice and also gaze at all the colors and paintings during the intermission. </p>
+</div>
+</body>
+</html>

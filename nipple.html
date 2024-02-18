@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tour</title>
+    <style type="text/css">
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        align-items: center;
+        background-color: white;
+        position: sticky;
+        top: 0px;
+      }
+      header li {
+        padding: 10px;
+      }
+      .nav_bar {
+        display: flex;
+        list-style-type: none;
+      }
+      .nav_bar a {
+        text-decoration: none;
+        color: #253342;
+        font-family: sans-serif;
+      }
+      .item {
+        width: 150px;
+      }
+      .nav_bar a:hover {
+        color: #154484;
+        text-decoration: underline;
+      }
+      .dd_content {
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        top: 50px;
+        padding: 30px;
+        background-color: white;
+      }
+      .dropdown:hover .dd_content {
+        display: block;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      .toggler {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .nav_bar {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0px;
+          right: 0px;
+          background-color: #ffbd1f;
+        }
+
+        .toggler {
+          display: block;
+        }
+        input[type="checkbox"]:checked ~ .nav_bar {
+          display: block;
+        }
+        header {
+          justify-content: space-between;
+        }
+      }
+
+      .box h1 {
+        color: #154484;
+        text-decoration: underline;
+        text-align: center;
+      }
+
+      .box img {
+        box-shadow: 0px 8px 8px gray;
+        float: left;
+        margin: 20px;
+      }
+
+      .img1:hover {
+        transform: scale(1.1);
+      }
+      .img1 {
+        transition: 0.2s linear;
+      }
+
+      .img2:hover {
+        transform: scale(1.1);
+      }
+      .img2 {
+        transition: 0.2s linear;
+      }
+
+      .img3:hover {
+        transform: scale(1.1);
+      }
+      .img3 {
+        transition: 0.2s linear;
+      }
+
+      .para {
+        box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.2);
+        width: 70%;
+        height: 120px;
+        margin: auto;
+        clear: left;
+        padding-top: 20px;
+        padding: 35px;
+        background-color: #154484;
+        color: #ffbd1f;
+        border-radius: 15px 50px 30px;
+      }
+      /*For phone view*/
+      @media only screen and (max-width: 600px) {
+        .box img {
+          width: 90%;
+        }
+        .para {
+          width: 80%;
+          height: 200px;
+        }
+      }
+
+      /*---------------------------------------------------------------------------------*/
+      /*For Tablet View*/
+
+      @media only screen and (min-width: 600px) {
+        .box img {
+          width: 28%;
+        }
+        .para {
+          width: 60%;
+        }
+        .nav_bar {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0px;
+          right: 0px;
+          background-color: #ffbd1f;
+        }
+
+        .toggler {
+          display: block;
+        }
+        input[type="checkbox"]:checked ~ .nav_bar {
+          display: block;
+        }
+        header {
+          justify-content: space-between;
+        }
+      }
+
+      /*-------------------------------------------------------------------------------------------------*/
+      /*For laptop view*/
+
+      @media only screen and (min-width: 992px) {
+        .box img {
+          width: 30%;
+        }
+        header {
+          display: flex;
+          flex-direction: row;
+          height: 80px;
+          align-items: center;
+          background-color: white;
+          position: sticky;
+          top: 0px;
+        }
+        header li {
+          padding: 10px;
+        }
+        .nav_bar {
+          display: flex;
+          list-style-type: none;
+          position: absolute;
+          top: 5px;
+          left: 100px;
+          background-color: white;
+        }
+        .nav_bar a {
+          text-decoration: none;
+          color: #253342;
+          font-family: sans-serif;
+        }
+        .item {
+          width: 150px;
+        }
+        .nav_bar a:hover {
+          color: #154484;
+          text-decoration: underline;
+        }
+        .dd_content {
+          display: none;
+          list-style-type: none;
+          position: absolute;
+          top: 30px;
+          padding: 30px;
+          background-color: white;
+        }
+        .dropdown:hover .dd_content {
+          display: block;
+        }
+        input[type="checkbox"] {
+          display: none;
+        }
+        .toggler {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="pbl2.html"> <img src="logo10.png" width="100px" /></a>
+      <input type="checkbox" id="cb" />
+      <label for="cb" class="toggler">&#9776;</label>
+
+      <ul class="nav_bar">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item dropdown">
+          <a href="#">Tours</a>
+          <ul class="dd_content">
+            <li><a href="#">Rome</a></li>
+            <li><a href="#">Venice</a></li>
+            <li><a href="#">Milan</a></li>
+            <li><a href="#">Naples</a></li>
+          </ul>
+        </li>
+        <li class="item"><a href="ggeo.html">Geography</a></li>
+        <li class="item"><a href="history2.html">History</a></li>
+        <li class="item"><a href="#">Tips</a></li>
+        <li class="item"><a href="about_us.html">About Us</a></li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <div class="box">
+        <h1>Naples</h1>
+        <img
+          class="img1"
+          src="https://cdn.britannica.com/54/142754-050-94E32692/Naples-Italy.jpg"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img2"
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/28/4a/2a/caption.jpg?w=1200&h=-1&s=1"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img3"
+          src="https://media.timeout.com/images/105237777/750/422/image.jpg"
+          width="30%"
+          height="300px"
+        />
+      </div>
+    </div>
+
+    <div class="para">
+      <p>
+        Naples, in southern Italy, offers a captivating landscape. Dominated by
+        Mount Vesuvius, its silhouette adds drama to the skyline. The Bay of
+        Naples, with its azure waters, provides stunning coastal views. The
+        historic center, a UNESCO site, boasts narrow streets and lively
+        piazzas, reflecting centuries of cultural heritage. Surrounding hills
+        and parks offer green spaces amidst the urban sprawl. Naples' landscape,
+        from volcanic majesty to coastal beauty and historical charm, enchants
+        visitors with its diverse allure.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="box">
+        <img
+          class="img1"
+          src="https://cdn-imgix.headout.com/microbrands-content-image/image/1d806a7b3b0f3a2c22150a991a3352bf-Naples%20to%20Pompeii%20tour.jpeg"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img2"
+          src="https://www.catholicweekly.com.au/wp-content/uploads/2018/10/shutterstock_179318804.jpg"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img3"
+          src="https://static.scientificamerican.com/sciam/cache/file/01441EC0-AE7C-4F92-94583DF9D6C8EAFF_source.jpg?w=1200"
+          width="30%"
+          height="300px"
+        />
+      </div>
+    </div>
+
+    <div class="para">
+      <p>
+        Pompeii, near Naples, Italy, is an archaeological marvel frozen in time
+        by the eruption of Mount Vesuvius in 79 AD. This ancient Roman city
+        offers a rare glimpse into daily life over two millennia ago. Remarkably
+        preserved ruins, including streets, homes, bathhouses, and even the
+        tragic plaster casts of citizens, provide a haunting yet immersive
+        experience. Pompeii's archaeological site spans over 150 acres, making
+        it one of the world's most extensive and significant excavations.
+        Visitors can explore the well-preserved remains, gaining insight into
+        ancient Roman culture, architecture, and urban planning, making Pompeii
+        an unparalleled destination for history enthusiasts.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="box">
+        <img
+          class="img1"
+          src="https://naplespompeii.com/images/archaeological-museum-naples1.jpg"
+          width="30px"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img2"
+          src="https://cdn-imgix.headout.com/blog-banner/image/d69e36f1bcdb54823c959b08f870d395-Museo_Archeologico_Nazionale_di_Napoli_42-min.jpeg"
+          height="300px"
+          width="30%"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img3"
+          src="https://www.napolike.it/turismo/wp-content/uploads/2015/06/Museo-Archeologico-Nazionale-Napoli.jpg"
+          height="300px"
+          width="30%"
+        />
+      </div>
+    </div>
+
+    <div class="para">
+      <p>
+        The Naples National Archaeological Museum, located in Naples, Italy, is
+        a treasure trove of ancient artifacts and archaeological wonders. Housed
+        within a grand 17th-century palace, the museum boasts one of the most
+        extensive collections of Greco-Roman artifacts in the world. Visitors
+        can marvel at exquisite sculptures, intricate mosaics, and priceless
+        artifacts from Pompeii, Herculaneum, and other ancient sites in the
+        region. Highlights include the Farnese Collection, with its renowned
+        Farnese Bull sculpture, and the Secret Cabinet, showcasing a remarkable
+        collection of ancient erotic art. The museum offers a fascinating
+        journey through the history and culture of the ancient Mediterranean
+        world, making it a must-visit destination for history enthusiasts and
+        art lovers alike.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="box">
+        <img
+          class="img1"
+          src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL210LXZlc3V2aXVzLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODI4fX19"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img2"
+          src="https://www.pompeiitours.it/wp-content/uploads/2019/03/Aerial-view-of-Pompeii.jpeg"
+          width="30%"
+          height="300px"
+        />
+      </div>
+
+      <div class="box">
+        <img
+          class="img3"
+          src="https://cdn.thecollector.com/wp-content/uploads/2023/03/mount-vesuvius-volcano-eruption-etching.jpg?width=1400&quality=70"
+          width="30%"
+          height="300px"
+        />
+      </div>
+    </div>
+    <div class="para">
+      <p>
+        Mount Vesuvius, located near Naples, Italy, is one of the world's most
+        famous volcanoes, infamous for its catastrophic eruption in 79 AD. This
+        stratovolcano, standing at about 4,203 feet (1,281 meters) tall,
+        dominates the skyline of the surrounding area. Its destructive eruption
+        buried the Roman cities of Pompeii and Herculaneum under a thick layer
+        of volcanic ash and pumice, preserving them for centuries. Today,
+        Vesuvius remains an active volcano, though dormant since 1944. Visitors
+        can hike its slopes to witness breathtaking views of the Bay of Naples
+        and gain insight into the geological forces that have shaped the region
+        for millennia.
+      </p>
+    </div>
+  </body>
+</html>

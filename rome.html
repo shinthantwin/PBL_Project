@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tour</title>
+	<style type="text/css">
+
+		body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  header{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    position: sticky; top: 0px;
+  }
+  header li{
+    padding: 10px;
+  }
+  .nav_bar {
+   display: flex;
+   list-style-type: none;
+  }
+  .nav_bar a {
+
+   text-decoration: none;
+   color:#253342;
+    font-family: sans-serif;
+  }
+  .item{
+  width: 150px;
+  }
+  .nav_bar a:hover {
+    color: #154484;
+    text-decoration: underline;
+  }
+.dd_content{
+    display: none;
+    list-style-type: none;
+    position: absolute; top: 50px;
+    padding: 30px;
+    background-color: white;
+
+}
+.dropdown:hover .dd_content{
+    display: block;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.toggler{
+  display: none;
+}
+
+
+@media only screen and (max-width:768px){
+    .nav_bar{
+      display: none;
+      position: absolute; top: 60px; left: 0px; right: 0px;
+      background-color: #FFBD1F;
+    }
+
+    .toggler{
+      display: block;
+    }
+input[type="checkbox"]:checked ~ .nav_bar{
+  display: block;
+}
+header{
+  justify-content: space-between;
+}
+}
+
+
+.box h1{
+  color: #154484;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.box img{
+	box-shadow: 0px 8px 8px gray;
+  float: left;
+  margin: 20px;
+}
+
+.img1:hover{transform: scale(1.1);}
+.img1{transition: 0.2s linear}
+
+.img2:hover{transform: scale(1.1);}
+.img2{transition: 0.2s linear}
+
+.img3:hover{transform: scale(1.1);}
+.img3{transition: 0.2s linear}
+
+.para{
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.2);
+  width: 70%; height: 120px;
+  margin: auto;
+  clear: left;
+  padding-top: 20px;
+  padding: 35px;
+  background-color:  #154484; color: #FFBD1F ;
+  border-radius: 15px 50px 30px;
+}
+/*For phone view*/
+@media only screen and (max-width:600px) {
+ .box img{
+  width: 90%;
+ }
+ .para{
+  width: 80%;
+  height: 200px;
+ }
+}
+
+/*---------------------------------------------------------------------------------*/
+/*For Tablet View*/
+
+@media only screen and (min-width:600px){
+  .box img{
+  width: 28%;
+ }
+ .para{
+  width: 60%;
+ }
+ .nav_bar{
+      display: none;
+      position: absolute; top: 60px; left: 0px; right: 0px;
+      background-color: #FFBD1F;
+    }
+
+    .toggler{
+      display: block;
+    }
+input[type="checkbox"]:checked ~ .nav_bar{
+  display: block;
+}
+header{
+  justify-content: space-between;
+}
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+/*For laptop view*/
+
+@media only screen and (min-width:992px) {
+  .box img{
+    width: 30%;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    position: sticky; top: 0px;
+  }
+  header li{
+    padding: 10px;
+  }
+  .nav_bar {
+   display: flex;
+   list-style-type: none;
+   position: absolute; top: 5px; left: 100px;
+   background-color: white;
+  }
+  .nav_bar a {
+
+   text-decoration: none;
+   color:#253342;
+    font-family: sans-serif;
+  }
+  .item{
+  width: 150px;
+  }
+  .nav_bar a:hover {
+    color: #154484;
+    text-decoration: underline;
+  }
+.dd_content{
+    display: none;
+    list-style-type: none;
+    position: absolute; top: 30px;
+    padding: 30px;
+    background-color: white;
+
+}
+.dropdown:hover .dd_content{
+    display: block;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.toggler{
+  display: none;
+}
+
+}
+
+
+  </style>
+
+</head>
+<body>
+  <header>
+     <a href="pbl2.html"> <img src="logo10.png" width="100px"></a>
+      <input type="checkbox" id="cb">
+      <label for="cb" class="toggler">&#9776;</label>
+
+    <ul class="nav_bar">
+    <li class="item"><a href="#">Home</a></li>
+     <li class="item dropdown"><a href="#">Tours</a>
+       <ul class="dd_content">
+        <li><a href="#">Rome</a></li>
+        <li><a href="#">Venice</a></li>
+        <li><a href="#">Milan</a></li>
+        <li><a href="#">Naples</a></li>
+       </ul>
+      </li>
+
+     <li class="item"><a href="ggeo.html">Geography</a></li>
+     <li class="item"><a href="history2.html">History</a></li>
+     <li class="item"> <a href="#">Tips</a></li>
+     <li class="item"> <a href="about_us.html">About Us</a></li>
+    
+    </ul>
+  </header>
+
+<div class="container">
+  <div class="box">
+    <h1>Rome</h1>
+   <img class="img1" src="https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122.jpg?w=826&h=564" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://miro.medium.com/v2/resize:fit:1400/1*gfzxEKbwzFDI8L-h2FQSrw.jpeg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3"  src="https://media.istockphoto.com/id/607604520/photo/forum-roman-ruins-in-rome-italy.jpg?s=170667a&w=0&k=20&c=l36V2rwyIpPKWTRXB83hpoOjjR50fS3rXqcMT_XuR-M=" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>Rome is the capital of Italy and the country's largest and most populous city. It has a population of over 2.7 million and an area of 1,285.3 square kilometers. Rome is located in the west-central part of the Italian peninsula, on the Tiber River in the Lazio region of Italy.Rome is situated in the central-western part of the Italian Peninsula, specifically in the region of Lazio (Latium), and it rests along the banks of the Tiber River.</p>
+
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1" src="https://static.toiimg.com/photo/53114296.cms" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://www.shutterstock.com/image-photo/rome-italy-colosseum-amphitheater-sunrise-600nw-2120859782.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3" src="https://www.planetware.com/wpimages/2019/05/italy-rome-colosseum-visiting-highlights-tips-tours.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>The Colosseum, built in the 1st century AD, was the epicenter of ancient Roman entertainment. This grand amphitheater hosted gladiator contests and thrilling public spectacles, attracting crowds of thousands. Today, its iconic structure stands as a symbol of Rome's rich history and architectural prowess. </p>
+
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1" src="https://static.wixstatic.com/media/e41b5c_8e39787f991543fd97451f50d467ae01~mv2.jpg/v1/fill/w_824,h_550,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e41b5c_8e39787f991543fd97451f50d467ae01~mv2.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://media.istockphoto.com/id/607604520/photo/forum-roman-ruins-in-rome-italy.jpg?s=170667a&w=0&k=20&c=l36V2rwyIpPKWTRXB83hpoOjjR50fS3rXqcMT_XuR-M=" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3"src="https://media.tacdn.com/media/attractions-splice-spp-674x446/12/3f/5a/c6.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>At the heart of ancient Rome, the Roman Forum was the bustling center for politics, religion, and social life. Its ruins include temples, basilicas, and government buildings that tell the story of the city's vibrant past. Walking through this archaeological site is like stepping back in time to witness the grandeur of the Roman Republic and Empire.  </p>
+</div>
+
+
+<div class="container">
+  <div class="box">
+   <img class="img1"src="https://www.italiandualcitizenship.net/wp-content/uploads/2019/03/History-of-the-Pantheon-Italy.jpg" width="30%">
+
+</div>
+
+<div class="box">
+  <img class="img2" src="https://media.cntraveler.com/photos/59d0df3249b1470c74ce83ea/16:9/w_2560%2Cc_limit/GettyImages-88434895.jpg" width="30%">
+</div>
+
+<div class="box">
+  <img class="img3" src="https://www.nzherald.co.nz/resizer/0xbTmLbR6lr0kG2X7KfYSzA7uLE=/arc-anglerfish-syd-prod-nzme/public/5RDXWO56KBHCTA6W4S4AATFGII.jpg" width="30%">
+</div>
+</div>
+
+<div class="para">
+  <p>The Pantheon, built by Emperor Hadrian in the 2nd century AD, is a marvel of Roman engineering. Originally a temple dedicated to Roman deities, it features a breathtaking dome, the world's largest unreinforced concrete dome. Over time, it transformed into a Christian church, preserving its impressive architecture. The Pantheon stands as a timeless symbol of Roman innovation. </p>
+</div>
+</body>
+</html>

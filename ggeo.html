@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="logo10.png" type="image/x-icon">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+    
+      }
+
+      header {
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        align-items: center;
+        background-color: white;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+      }
+
+      header li {
+        padding: 10px;
+      }
+
+      .nav_bar {
+        display: flex;
+        list-style-type: none;
+      }
+
+      .nav_bar a {
+        text-decoration: none;
+        color: #253342;
+        font-family: sans-serif;
+      }
+
+      .item {
+        width: 150px;
+      }
+
+      .nav_bar a:hover {
+        color: #154484;
+        text-decoration: underline;
+      }
+
+      .dd_content {
+        display: none;
+        list-style-type: none;
+        position: absolute;
+        top: 50px;
+        padding: 30px;
+        background-color: white;
+      }
+
+      .dropdown:hover .dd_content {
+        display: block;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      .toggler {
+        display: none;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .nav_bar {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0px;
+          right: 0px;
+          background-color: #ffbd1f;
+        }
+
+        .toggler {
+          display: block;
+        }
+
+        input[type="checkbox"]:checked ~ .nav_bar {
+          display: block;
+        }
+
+        header {
+          justify-content: space-between;
+        }
+      }
+
+      .container_h{
+        margin-top: 30px;
+      }
+.container_h h1{
+  border-radius: 20px;
+  width: 50%; height: 70px;
+  margin: auto;
+  font-size: 25px;
+  text-align: center;
+  background-color: #154484;
+  color: aliceblue;
+  padding-top: 40px;
+}
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      p {
+        width: 80%;
+      }
+
+      .map {
+        margin-top: 20px;
+      }
+
+      .image-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin-top: 20px;
+      }
+
+      .image-container {
+        text-align: center;
+        width: 30%;
+        height: 400px;
+      }
+
+      h1,h2{
+        color: #154484;
+      }
+
+      .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.2s linear;
+      box-shadow: 3px 5px 8px #154484 ;
+      }
+
+      .image-box img:hover {
+        transform: scale(1.1);
+      }
+
+      .image-title {
+        text-align: center;
+        margin-top: 10px;
+        
+      }
+
+      .center {
+        text-align: center;
+      }
+      .container2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+      }
+
+      .box {
+        display: flex;
+        width: 100%;
+      }
+
+      .box > * {
+        margin: 5px;
+       
+      }
+    .text p {
+       margin: auto; padding-top: 30px;
+      }
+
+      .text{
+        background-color: white;
+        opacity: 0.8;
+        height: 300px;
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+      }
+      .para{
+        background-image: url("https://ravishmag.co.uk/wp-content/uploads/2022/07/pisa-1024x576.jpg");
+        width: 75% ;  
+        height: 450px;
+        background-size: cover;
+            background-repeat: no-repeat;
+      }
+      .img-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s linear;
+        border-radius: 10%;
+      }
+
+      .img-container img:hover {
+        transform: scale(1.2);
+      }
+      @media only screen and (max-width: 768px) {
+        .nav_bar {
+          flex-direction: column;
+          align-items: center;
+          display: none;
+        }
+
+        .nav_bar li {
+          margin: 10px 0;
+        }
+
+        .toggler {
+          display: block;
+        }
+
+        input[type="checkbox"]:checked ~ .nav_bar {
+          display: flex;
+        }
+
+        .image-box {
+          flex-direction: column;
+        }
+
+        .image-container {
+          width: 80%;
+          margin: 20px auto;
+        }
+
+        .container2 {
+          margin-top: 10px;
+        }
+
+        .box {
+          flex-direction: column;
+        }
+        .container_h h1{
+          width: 90%;
+        }
+      .para{
+        width: 100%;
+      }
+
+      .text{
+        width: 90%; height: 400px;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="pbl2.html"><img src="logo10.png" width="100px" /></a>
+      <input type="checkbox" id="cb" />
+      <label for="cb" class="toggler">&#9776;</label>
+
+      <ul class="nav_bar">
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item dropdown">
+          <a href="#">Tours</a>
+          <ul class="dd_content">
+            <li><a href="rome.html">Rome</a></li>
+            <li><a href="venice.html">Venice</a></li>
+            <li><a href="milan.html">Milan</a></li>
+            <li><a href="#">Naples</a></li>
+          </ul>
+        </li>
+
+        <li class="item"><a href="food.html">Geography</a></li>
+        <li class="item"><a href="history.html">History</a></li>
+        <li class="item"><a href="#">Tips</a></li>
+        <li class="item"><a href="about_us.html">About Us</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <h1>Welcome</h1>
+      <p>
+        Italy's geography is a tapestry of contrasting landscapes, each
+        contributing to the country's allure. Along its coastline, the azure
+        waters of the Mediterranean Sea beckon travelers to sandy beaches and
+        charming coastal towns. Moving inland, verdant hills adorned with
+        vineyards and olive groves paint a picturesque scene, particularly in
+        regions like Tuscany and Umbria. As we venture further north, the
+        terrain becomes more rugged, giving way to the imposing peaks of the
+        Italian Alps. Here, snow-capped summits offer breathtaking vistas and
+        opportunities for outdoor adventure. From the sun-kissed shores of
+        Sicily to the snow-dusted slopes of the Dolomites, Italy's geography
+        invites exploration at every turn.
+      </p>
+      <div class="image-box">
+        <div class="image-container">
+          <img
+            src="https://media.istockphoto.com/id/835874798/photo/italy-country-3d-render-topographic-map.jpg?s=612x612&w=0&k=20&c=2Ki4uSs3URSTmf6_GBV-A6K1XEZwDPzbeSKAsKcGkkA="
+            alt="MAP"
+          />
+          <div class="image-title"><h2>Topographic Map</h2></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Italy_K%C3%B6ppen.svg/1200px-Italy_K%C3%B6ppen.svg.png"
+            alt="Map"
+          />
+          <div class="image-title"><h2>Climate Map</h2></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://www.mapworld.com.au/cdn/shop/products/Italy_Political_Geo4_1174_x_1000mm_Wall_Map.jpg?v=1575850904"
+            alt="mAp"
+          />
+          <div class="image-title"><h2>Political Map</h2></div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <br />
+    <div class="container_h">
+      <h1>Geography of Italy</h1>
+    </div>
+    <div class="container2">
+      
+        <div class="para">
+
+          <div class="text">
+          <p>
+            Italy's geography is a tapestry of contrasting landscapes, each
+            contributing to the country's allure. Along its coastline, the azure
+            waters of the Mediterranean Sea beckon travelers to sandy beaches
+            and charming coastal towns. Moving inland, verdant hills adorned
+            with vineyards and olive groves paint a picturesque scene,
+            particularly in regions like Tuscany and Umbria. As we venture
+            further north, the terrain becomes more rugged, giving way to the
+            imposing peaks of the Italian Alps. Here, snow-capped summits offer
+            breathtaking vistas and opportunities for outdoor adventure. From
+            the sun-kissed shores of Sicily to the snow-dusted slopes of the
+            Dolomites, Italy's geography invites exploration at every turn..
+          </p>
+        </div>
+     </div>
+    </div>
+  </body>
+</html>
